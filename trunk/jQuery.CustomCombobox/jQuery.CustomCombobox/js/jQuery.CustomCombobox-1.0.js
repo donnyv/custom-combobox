@@ -8,6 +8,7 @@
 *   http://donnyvblog.blogspot.com/
 *   http://code.google.com/p/custom-combobox
 *   
+*   Licensed under the Apache License 2.0
 *
 */ 
 (function($){  
