@@ -9,79 +9,86 @@
 <script type="text/javascript" src="js/jquery.CustomCombobox-1.0.js"></script> 
 
 <script type="text/javascript">
-$().ready(function() {
-	
-	function TestClass(){
-		this.ID = "";
-		this.IssueNum = "";
-		this.Notes = "";
-	}
-	
-	var Issues = [3];
-	var Issue = new TestClass();
-	Issue.ID = 1;
-	Issue.IssueNum = "1a";
-	Issue.Notes = "This says something.";
-	Issues[0] = Issue; 
-	
-	Issue = new TestClass();
-	Issue.ID = 2;
-	Issue.IssueNum = "3";
-	Issue.Notes = "";
-	Issues[1] = Issue;
+    $().ready(function() {
 
-	Issue = new TestClass();
-	Issue.ID = 3;
-	Issue.IssueNum = "10";
-	Issue.Notes = "Did this work";
-	Issues[2] = Issue;
+        function TestClass() {
+            this.ID = "";
+            this.IssueNum = "";
+            this.ImageUrl = "";
+            this.Notes = "";
+        }
 
-	Issues[3] = Issue;
-	Issues[4] = Issue;
-	Issues[5] = Issue;
-	Issues[6] = Issue;
-	Issues[7] = Issue;
-	Issues[8] = Issue;
-	Issues[9] = Issue;
-	Issues[10] = Issue;
-	Issues[11] = Issue;
+        var Issues = [3];
+        var Issue = new TestClass();
+        Issue.ID = 1;
+        Issue.IssueNum = "1a";
+        Issue.ImageUrl = "Cover01.png";
+        Issue.Notes = "Spiderman dies in this one";
+        Issues[0] = Issue;
+
+        Issue = new TestClass();
+        Issue.ID = 2;
+        Issue.IssueNum = "3";
+        Issue.ImageUrl = "Cover02.png";
+        Issue.Notes = "";
+        Issues[1] = Issue;
+
+        Issue = new TestClass();
+        Issue.ID = 3;
+        Issue.IssueNum = "5";
+        Issue.ImageUrl = "Cover03.png";
+        Issue.Notes = "Great cover!";
+        Issues[2] = Issue;
+
+        Issue = new TestClass();
+        Issue.ID = 4;
+        Issue.IssueNum = "10";
+        Issue.ImageUrl = "Cover04.png";
+        Issue.Notes = "Some notes about something.";
+        Issues[3] = Issue;
 
 
-	//var Template = "<div>{IssueNum}<br/><br/><b>Notes:</b>{Notes}</div>";
-	
-	var aryData = ['hey','you','guys'];
-	var Template = "<div><b>{}</b></div>";
+        var Template = "<div style='border-top:1px gray dashed;'>" +
+                            "<img src='{ImageUrl}'/>" +
+                            "<b>Notes:</b>{Notes}" +
+                       "</div>" +
+                       "<div style='margin-left:45px'>" +
+                        "<b>{IssueNum}</b>" +
+                       "</div>";
 
-	var c = $(".Issues").customcombobox(Issues,{
-	//var c = $("#Issues").customcombobox(aryData,{
-		width: 1300,
-		//template: Template,
-		displayPropertyName: "IssueNum",
-		//initialIndex: 3,
-		//initialValue: "3",
-		maxVisibleRows: 6,
-		idPropertyName: "ID",
-		initialValueByID: 3,
-		useEdgeDetection: true,
-		onSelect: function(item){
-			//alert(item.data("source").IssueNum);
-		}
-	});
-	c.setSelectedIndex(4);
-	
-		
-});
+        var aryData = ['hey', 'you', 'guys'];
+        //var Template = "<div><b>{}</b></div>";
+
+        var c = $(".Issue").customcombobox(Issues, {
+            //var c = $(".Issue").customcombobox(aryData,{
+            width: 1300,
+            template: Template,
+            displayPropertyName: "IssueNum",
+            //initialIndex: 3,
+            //initialValue: "3",
+            maxVisibleRows: 6,
+            //idPropertyName: "ID",
+            //initialValueByID: 3,
+            useEdgeDetection: true,
+            onSelect: function(item) {
+                //alert(item.data("source").IssueNum);
+            }
+        });
+        
+
+
+    });
 </script>
 </head>
 
 <body>
-<div style="height:600px"></div>
+<div style="height:600px;"></div>
 <br/>
-<div class="Issues"></div>
+<div class="Issue"></div>
 <br/>
-<div class="Issues"></div>
+<div class="Issue"></div>
 <br/>
-<div class="Issues"></div>
+<div class="Issue"></div>
 <br/>
 <div style="height:600px"></div>
 </body>

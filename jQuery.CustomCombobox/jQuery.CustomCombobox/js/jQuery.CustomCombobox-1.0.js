@@ -1,7 +1,8 @@
 ﻿/*
 *   jQuery.CustomCombobox
 *   ----------------------
-*   version: 1.0
+*   version: 1.2
+*   date: 1/26/10
 *
 *   Copyright (c) 2010 Donny Velazquez
 *   http://www.ComicsInventory.com   
@@ -244,12 +245,17 @@
  
 	$.fn.customcombobox.defaults = {
 		width: -1,
-		// When set to -1 width is automaticaly set using the width of the input box plus width of the arrow sprite image.
+		// When set to -1 width is automaticaly set using the width of the 
+		// input box plus width of the arrow sprite image.
 		
 		template: "",
-		// Html template for each item (put json properties in curly braces)
-		/*	Example:
+		// Html template will be used for each item.
+		/*	
+		*   Example using json object (put json properties in curly braces):
 		*	"<div>{IssueNum}<br/><b>Notes:</b>{Notes}</div>"
+		*
+		*   Example using basic array (put empty curly braces where data should go)
+		*   "<b>{}</b>"
 		*/
 		
 		displayPropertyName: "",
