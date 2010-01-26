@@ -1,0 +1,66 @@
+﻿div.CustomCombobox{
+	display:inline-block;
+	zoom:1; /* IE hack */
+	*display:inline; /*IE hack */
+	padding:2px 2px 2px 2px;
+	border:1px gray solid;
+	margin:0px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	background-color:#F4F4F4;
+}
+div.CustomCombobox .cc-ItemListContainer{
+	display:none;
+	border:1px gray solid;
+	background-color:#ffffff;
+	height:0px;
+	position:absolute;
+	z-index:999;
+	overflow:auto;
+}
+div.CustomCombobox .cc-ItemListContainer ul.cc-ItemList{
+	list-style-type:none;
+	padding: 0px;
+	margin: 0px;
+}
+div.CustomCombobox .cc-ItemListContainer li.cc-Item{
+	cursor:pointer;
+	padding:2px 2px 2px 2px;
+}
+div.CustomCombobox .cc-ItemListContainer li.cc-Item:hover{
+	background-color:#6699FF;
+	color:#ffffff;
+}
+div.CustomCombobox .cc-Box .cc-Textbox{
+	float:left;
+	display:block;
+	width:300px;
+	height:auto;
+	font-size:9pt;
+	margin:0px 0px 0px 2px;
+	padding:1px 2px 1px 2px;
+	border:0px;
+	-moz-border-top-left-radius: 5px; 
+	-moz-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+div.CustomCombobox .cc-Box .cc-Arrow{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	float:left;
+	display:block;
+	width:15px;
+	height:16px;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	background-image:url('../img/jQuery.CustomCombobox.arrow.gif');
+}
+div.CustomCombobox .cc-Box .cc-Arrow:hover {
+	background-position: center;
+	cursor:pointer;
+}
+div.CustomCombobox .cc-Box .cc-Arrow:active{ 
+	background-position: bottom;
+}
