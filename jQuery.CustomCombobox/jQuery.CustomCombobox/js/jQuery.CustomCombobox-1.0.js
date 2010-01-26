@@ -1,4 +1,15 @@
-﻿//You need an anonymous function to wrap around your function to avoid conflict  
+﻿/*
+*   jQuery.CustomCombobox
+*   ----------------------
+*   version: 1.0
+*
+*   Copyright (c) 2010 Donny Velazquez
+*   http://www.ComicsInventory.com   
+*   http://donnyvblog.blogspot.com/
+*   http://code.google.com/p/custom-combobox
+*   
+*
+*/ 
 (function($){  
 	$.fn.customcombobox = function(jsonData,options) { 
 	
