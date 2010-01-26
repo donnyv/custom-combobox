@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled 1</title>
+<link type="text/css" title="combobox" href="css/jQuery.CustomCombobox.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.CustomCombobox-1.0.js"></script> 
+
+<script type="text/javascript">
+$().ready(function() {
+	
+	function TestClass(){
+		this.ID = "";
+		this.IssueNum = "";
+		this.Notes = "";
+	}
+	
+	var Issues = [3];
+	var Issue = new TestClass();
+	Issue.ID = 1;
+	Issue.IssueNum = "1a";
+	Issue.Notes = "This says something.";
+	Issues[0] = Issue; 
+	
+	Issue = new TestClass();
+	Issue.ID = 2;
+	Issue.IssueNum = "3";
+	Issue.Notes = "";
+	Issues[1] = Issue;
+
+	Issue = new TestClass();
+	Issue.ID = 3;
+	Issue.IssueNum = "10";
+	Issue.Notes = "Did this work";
+	Issues[2] = Issue;
+
+	Issues[3] = Issue;
+	Issues[4] = Issue;
+	Issues[5] = Issue;
+	Issues[6] = Issue;
+	Issues[7] = Issue;
+	Issues[8] = Issue;
+	Issues[9] = Issue;
+	Issues[10] = Issue;
+	Issues[11] = Issue;
+
+
+	//var Template = "<div>{IssueNum}<br/><br/><b>Notes:</b>{Notes}</div>";
+	
+	var aryData = ['hey','you','guys'];
+	var Template = "<div><b>{}</b></div>";
+
+	var c = $(".Issues").customcombobox(Issues,{
+	//var c = $("#Issues").customcombobox(aryData,{
+		width: 1300,
+		//template: Template,
+		displayPropertyName: "IssueNum",
+		//initialIndex: 3,
+		//initialValue: "3",
+		maxVisibleRows: 6,
+		idPropertyName: "ID",
+		initialValueByID: 3,
+		useEdgeDetection: true,
+		onSelect: function(item){
+			//alert(item.data("source").IssueNum);
+		}
+	});
+	c.setSelectedIndex(4);
+	
+		
+});
+</script>
+</head>
+
+<body>
+<div style="height:600px"></div>
+<br/>
+<div class="Issues"></div>
+<br/>
+<div class="Issues"></div>
+<br/>
+<div class="Issues"></div>
+<br/>
+<div style="height:600px"></div>
+</body>
+
+</html>
