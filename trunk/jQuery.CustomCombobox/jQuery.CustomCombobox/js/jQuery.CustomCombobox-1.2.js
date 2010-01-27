@@ -127,7 +127,7 @@
     }
 
     $.fn.setSelectedIndex = function(i) {
-        //alert($(this).html());
+       
     };
 
     $.fn.setSelectedValue = function(v) {
@@ -172,7 +172,7 @@
         }
 
         // Get height  ** BUG in Google Chrome when creating height. 
-        // For some reason it adds 20px to the first item only the first time it finds the height.
+        // For some reason it adds pixals to the first item only the first time it finds the height.
         var h = 0;
         Combobox.find(".cc-ItemListContainer").css({ border: "0px white solid", display: "block", visibility: "hidden" });
         Combobox.find(".cc-Item").each(function(i) {
