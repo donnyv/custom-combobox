@@ -46,8 +46,8 @@
     <Content Include="css\jQuery.CustomCombobox-min.css" />
     <Content Include="css\jQuery.CustomCombobox.css" />
     <Content Include="img\jQuery.CustomCombobox.arrow.gif" />
-    <Content Include="js\jQuery.CustomCombobox-1.2-min.js" />
-    <Content Include="js\jQuery.CustomCombobox-1.2.js" />
+    <Content Include="js\jQuery.CustomCombobox-1.2.1-min.js" />
+    <Content Include="js\jQuery.CustomCombobox-1.2.1.js" />
     <Content Include="MainTest.htm" />
   </ItemGroup>
 </Project>
