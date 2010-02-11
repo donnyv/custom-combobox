@@ -1,8 +1,8 @@
 ﻿/*
 *   jQuery.CustomCombobox
 *   ----------------------
-*   version: 1.2
-*   date: 1/26/10
+*   version: 1.2.1
+*   date: 2/10/10
 *
 *   Copyright (c) 2010 Donny Velazquez
 *   http://www.ComicsInventory.com   
@@ -78,14 +78,17 @@
                 };
 
                 //Set initial value
-                if (o.initialIndex != -1) {
+                if (o.topMsg != "") {
+                    ComboBox.find(".cc-Textbox").val(o.topMsg);
+                }
+                if (o.topMsg == "" && o.initialIndex != -1) {
                     if (o.displayPropertyName != "") {
                         ComboBox.find(".cc-Textbox").val(jsonData[o.initialIndex][o.displayPropertyName]);
                     } else {
                         ComboBox.find(".cc-Textbox").val(jsonData[i]);
                     }
                 }
-                if (o.initialIndex == -1 && o.initialValue != "") {
+                if (o.topMsg == "" && o.initialIndex == -1 && o.initialValue != "") {
                     for (i = 0; i <= jsonData.length - 1; i++) {
                         if (typeof (jsonData[0]) == 'object' && o.displayPropertyName != "") {
                             if (jsonData[i][o.displayPropertyName] == o.initialValue) {
@@ -99,7 +102,7 @@
                         }
                     }
                 }
-                if (o.initialIndex == -1 && o.initialValue == "" && o.displayPropertyName != "" && o.idPropertyName != "" && o.initialValueByID != "") {
+                if (o.topMsg == "" && o.initialIndex == -1 && o.initialValue == "" && o.displayPropertyName != "" && o.idPropertyName != "" && o.initialValueByID != "") {
                     for (i = 0; i <= jsonData.length - 1; i++) {
                         if (typeof (jsonData[0]) == 'object') {
                             if (jsonData[i][o.idPropertyName] == o.initialValueByID) {
@@ -256,6 +259,9 @@
         *   Example using basic array (put empty curly braces where data should go)
         *   "<b>{}</b>"
         */
+
+        //A message placed in the input box when first loaded.
+        topMsg: "", //"Pick an issue..."
 
         displayPropertyName: "",
         // Json property whose value is displayed on select
