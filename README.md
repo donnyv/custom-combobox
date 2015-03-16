@@ -5,3 +5,6 @@ An array or a collection of objects can be used to fill the dropdown. It also su
 
 ##Updates
 2/10/10 - Added "topMsg" option, lets you add a message in the input box when first loaded
+
+##Browser Support
+IE 6,7,8, Google Chrome, Firefox, Safari, Opera
